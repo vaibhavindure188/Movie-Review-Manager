@@ -7,6 +7,15 @@ function ProductCard({product}) {
   const handleClick = (product)=>{
     navigate(`/product/${level1}/${product.movieName}`)
   }
+
+  useEffect(() => {
+    const fun = ()=>{
+      window.scrollTo(0, 0);
+    }
+
+    fun();
+      
+  }, []);
   return (
     <div onClick={()=>handleClick(product)} className='productCard w-[15rem] m-3 transition-all cursor-pointer object-cover object-left-top'>
       <div className='h-[20rem]'>
@@ -16,7 +25,9 @@ function ProductCard({product}) {
       <div className='textPart bg-white p-3'>
         <div>
         <p className='font-bold opacity-60'>{product.movieName}</p>
-        <p>{product.genre}</p>
+        <p>{
+          product.genre.map((item)=>(` ${item} `))
+        }</p>
         </div>
 
         

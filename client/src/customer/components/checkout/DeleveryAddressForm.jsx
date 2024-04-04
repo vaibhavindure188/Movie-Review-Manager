@@ -47,7 +47,7 @@ function DeleveryAddressForm() {
       <Grid sx={{mt:2}} container spacing={4}  className="">
         <Grid xs={12} lg={5} item className='border rounded-md shadow-md h-[30.5rem] overflow-y-scroll'>
             <div className='p-5 py-7 border-b cursor-pointer'>
-            <Button onClick={()=>handleClick()} variant="contained" color="primary" size='large' sx={{mt:2, bgcolor:'indigo',marginBottom:1}}>All Reviews</Button>
+            <Button  variant="contained" color="primary" size='large' sx={{mt:2, bgcolor:'indigo',marginBottom:1}}>All Reviews</Button>
                 {
                     adds.map((item)=><AddressCard item= {item}/> )
                 }
